@@ -77,6 +77,10 @@ CBuild::GXX challenge29("challenge29");
 CBuild::GXX challenge30("challenge30");
 CBuild::GXX challenge31("challenge31");
 CBuild::GXX challenge32("challenge32");
+CBuild::GXX challenge33("challenge33");
+CBuild::GXX challenge35("challenge35");
+TODO todo35(35, "Do tasks 35 and 26.");
+CBuild::GXX challenge36("challenge36");
 void init() {
   challenge1.add_folder("src/task1/");
   challenge1.set_standart("c++20");
@@ -215,4 +219,19 @@ void init() {
   challenge32.set_standart("c++20");
   challenge32.add_link_arg("-lstdc++");
   CBuild::Registry::RegisterTarget(&challenge32);
+  challenge33.add_folder("src/task33/");
+  challenge33.set_standart("c++20");
+  challenge33.add_link_arg("-lstdc++");
+  CBuild::Registry::RegisterTarget(&challenge33);
+  challenge35.add_folder("src/task35/");
+  challenge35.set_standart("c++20");
+  challenge35.add_link_arg("-lstdc++");
+  challenge35.add_requirment("TODO35");
+  CBuild::Registry::RegisterTarget(&challenge35);
+  CBuild::Registry::RegisterTask(&todo35);
+  challenge36.add_folder("src/task36/");
+  challenge36.set_standart("c++20");
+  challenge36.add_link_arg("-lstdc++");
+  challenge36.add_link_arg("-lm");
+  CBuild::Registry::RegisterTarget(&challenge36);
 }
