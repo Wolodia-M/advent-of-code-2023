@@ -81,6 +81,11 @@ CBuild::GXX challenge33("challenge33");
 CBuild::GXX challenge35("challenge35");
 TODO todo35(35, "Do tasks 35 and 26.");
 CBuild::GXX challenge36("challenge36");
+CBuild::GXX challenge37("challenge37");
+CBuild::GXX challenge38("challenge38");
+CBuild::GXX challenge39("challenge39");
+CBuild::GXX challenge40("challenge40");
+TODO todo40(40, "Takes to long to do actual task but passes test40.");
 void init() {
   challenge1.add_folder("src/task1/");
   challenge1.set_standart("c++20");
@@ -234,4 +239,22 @@ void init() {
   challenge36.add_link_arg("-lstdc++");
   challenge36.add_link_arg("-lm");
   CBuild::Registry::RegisterTarget(&challenge36);
+  challenge37.add_folder("src/task37/");
+  challenge37.set_standart("c++20");
+  challenge37.add_link_arg("-lstdc++");
+  CBuild::Registry::RegisterTarget(&challenge37);
+  challenge38.add_folder("src/task38/");
+  challenge38.set_standart("c++20");
+  challenge38.add_link_arg("-lstdc++");
+  CBuild::Registry::RegisterTarget(&challenge38);
+  challenge39.add_folder("src/task39/");
+  challenge39.set_standart("c++20");
+  challenge39.add_link_arg("-lstdc++");
+  CBuild::Registry::RegisterTarget(&challenge39);
+  challenge40.add_folder("src/task40/");
+  challenge40.set_standart("c++20");
+  challenge40.add_link_arg("-lstdc++");
+  challenge35.add_requirment("TODO40");
+  CBuild::Registry::RegisterTarget(&challenge40);
+  CBuild::Registry::RegisterTask(&todo40);
 }
